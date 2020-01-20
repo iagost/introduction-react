@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8em;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  margin: 3em;
+  background-color: #FFFFFF;
+  padding: 1em;
+  border-radius: 0.3em;
+}
+
+ul {
+  list-style-type: none;
+  width: 35em;
+}
+
+
+hr {
+  border-top: 1px solid #e9e9e9;
+  margin: 0em;
+  margin-top: 2em;
+  border-left: none;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.imgPerfil{
+  max-height: 2.5em;
+  width: auto;
+  height: auto;
+  margin-left: 0em;
+  margin-top: 0em;
+  border-radius: 10em;
+}
+
+.author-text{
+  font-weight: bold;
+  color: black;
+  margin: 0em;
+  font-size: 0.7em;
+}
+
+.author-data-publicacao {
+  color: grey;
+  margin: 0.2em;
+  font-size: 0.6em;
+}
+
+.author-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.post-text{
+  color: black;
+  font-size: 0.7em;
+  margin: 0em;
+  margin-left: 1em;
+  margin-top: 1em;
+
+}
+
+.coment-card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 1em 0em 0em 1em;
+}
+
+.coment{
+  color: black;
+  font-size: 0.7em;
+  margin: 0em;
+  margin-left: 1em;
+  background-color: #EEEEEE;
+  padding: 1em;
+  border-radius: 1.8em;
+}
