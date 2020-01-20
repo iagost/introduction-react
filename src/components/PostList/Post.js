@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Coment from '../PostList/Coment';
 import './style.css';
 
 class Post extends Component {
@@ -18,12 +18,7 @@ class Post extends Component {
       <p className="post-text">{this.props.data.contents}</p>
       <hr/>
       {this.props.data.comments.map( coment => 
-        <div className="coment-card">
-          <img className="imgPerfil" src={coment.author.avatar}/>
-          <p className="coment">
-            <strong>{coment.author.name}   </strong>{coment.content}
-          </p>
-        </div>
+        <Coment key={coment.id} data={coment}/>
       )}  
     </div>  
   </li>);
