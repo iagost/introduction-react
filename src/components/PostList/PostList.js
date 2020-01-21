@@ -10,6 +10,17 @@ import carolProfile from '../../assets/carol-profile.jpg'
 class PostList extends Component {
 
   state = {
+    newPost: 
+      {
+        id: '',
+        author: {
+          name: 'Iago dos Santos',
+          avatar: iagoProfile,
+        },
+        date: '19 Jan 2020',
+        contents: '',
+        comments: []
+      },
     posts: [
       {
         id: 1,
@@ -79,12 +90,41 @@ class PostList extends Component {
     ]
   }
 
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.setState({
+      newPost: { ...this.state.newPost, id: this.state.posts.length + 1},
+      posts: [...this.state.posts, this.state.newPost]
+    });
+
+  }
+
+  handleInputChange = e => { 
+    this.setState({
+      newPost: { ...this.state.newPost, contents: e.target.value},
+    });
+  }
+
+
   render(){
+    console.log(this.state.posts);
     return(
       <div className="container">
+        <form onSubmit={this.handleSubmit}>
+          <a>Criar publicação</a>
+          <img className="imgPerfil" src={iagoProfile}/>
+          <textarea 
+            type="text" 
+            onChange={this.handleInputChange}
+            value={this.state.newPost.content}>
+          </textarea>
+          <button type="submit">Publicar</button>
+        </form>
         <ul>
             {this.state.posts.map( post => <Post key={post.id} data={post}/>)}
         </ul>
+        
       </div>
     )}
 
